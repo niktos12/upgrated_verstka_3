@@ -229,22 +229,195 @@ body .problems {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: 80px;
+  background-color: linear-gradient(0deg, rgba(88, 28, 135, 0.75) 0%, rgba(88, 28, 135, 0.75) 100%), url(<path-to-image>), lightgray 50%/cover no-repeat;
 }
 body .problems .problems-div {
   display: flex;
   justify-content: flex-end;
   padding: 80px;
-  background: linear-gradient(0deg, rgba(88, 28, 135, 0.75) 0%, rgba(88, 28, 135, 0.75) 100%), url(<path-to-image>), lightgray 50%/cover no-repeat;
   border-radius: 30px;
+  background-image: url(../img/baloons.jpg);
+}
+body .problems .problems-div .space {
+  content: "";
+  width: 600px;
+  max-width: 600px;
+  max-height: 200px;
 }
 body .problems .problems-div .problems-text {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 24px;
 }
 body .problems .problems-div .problems-text .problems-h1 {
   font-size: 56px;
+  font-weight: 800;
+  line-height: 110%;
+  color: #fff;
+  margin: 0;
 }
+body .problems .problems-div .problems-text .problems-p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #fff;
+  margin: 0;
+}
+body .problems .problems-div .problems-text .problems-more .problems-more-a {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.5px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  gap: 16px;
+}
+body .improve {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  margin-bottom: 80px;
+  gap: 80px;
+}
+body .improve .improve-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 0px;
+  gap: 24px;
+}
+body .improve .improve-text .improve-h1 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 110%;
+  color: #0F172A;
+  margin: 0;
+}
+body .improve .improve-text .btn-improve {
+  display: flex;
+  flex-direction: row;
+  gap: -1px;
+}
+body .improve .improve-text .btn-improve .choose {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110%;
+  color: #0F172A;
+  padding: 16px 32px;
+  border: 1px solid #CBD5E1;
+  background: #fff;
+  cursor: pointer;
+}
+body .improve .improve-text .btn-improve .active {
+  background: #F1F5F9;
+}
+body .improve .improve-text .btn-improve .choose:nth-child(3) {
+  border-radius: 0px 8px 8px 0px;
+}
+body .improve .improve-text .btn-improve .choose:nth-child(1) {
+  border-radius: 8px 0px 0px 8px;
+}
+body .improve .improve-text .improve-p {
+  color: #475569;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+}
+body .improve .improve-text .improve-more {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #2563EB;
+  gap: 16px;
+}
+body .join {
+  display: flex;
+  padding: 80px;
+  border-radius: 30px;
+  margin: 0 80px;
+  background: linear-gradient(99deg, #312E81 0%, #1E40AF 0.01%, #1E3A8A 46%, #701A75 96.97%);
+}
+body .join .join-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+body .join .join-text .join-h1 {
+  font-size: 56px;
+  text-align: center;
+  color: #fff;
+  font-weight: 800;
+  line-height: 110%;
+  margin: 0;
+}
+body .join .join-text .join-p {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+}
+body .join .join-text .join-more {
+  padding: 15px 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 8px;
+  border: 2px solid #2563EB;
+  background: #2563EB;
+  color: #fff;
+  gap: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px; /* 100% */
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+body footer .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 80px;
+}
+body footer .footer .logo-teams {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body footer .footer .logo-teams .logo-footer {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 110%;
+  color: #0F172A;
+}
+body footer .footer .logo-teams .footer-p {
+  margin: 0;
+}
+body footer .footer .nav-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+body footer .footer .nav-footer .a-nav-footer {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #475569;
+  text-decoration: none;
+}
+
 :root {
   --container: 1400px;
 }
