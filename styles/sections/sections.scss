@@ -385,6 +385,7 @@ body{
                 justify-content: center;
             }
             .improve-deskstop{
+                transition: opacity 0.5s ease;
                 @include imgs(){
                 max-width: 80%;
             }
@@ -426,10 +427,14 @@ body{
                     border: 1px solid #CBD5E1;
                     background: #fff;
                     cursor: pointer;
+                    transition: .5s ease;
                     @include aller(){
                         padding: 8px 16px;
                     }
                     
+                }
+                .choose:hover{
+                    background: #F1F5F9;
                 }
                 .active{
                         background: #F1F5F9;

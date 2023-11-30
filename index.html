@@ -8,26 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script src="./scripts/app.js" defer></script>
 </head>
 <body>
-    <header class="sticky">
+    <header class="sticky" id="sticky">
         <div class="header">
             <h2 class="logo">magnifico</h2>
             <div class="nav">
-                <a href="#" class="a-nav">Products</a>
-                <a href="#" class="a-nav">Solutions</a>
-                <a href="#" class="a-nav">Services</a>
-                <a href="#" class="a-nav">Help Center</a>
-                <a href="#" class="a-nav">Pricing</a>
+                <a href="#projects" class="a-nav">Products</a>
+                <a href="#solutions" class="a-nav">Solutions</a>
+                <a href="#tools" class="a-nav">Services</a>
+                <a href="#improve" class="a-nav">Help Center</a>
+                <a href="#join" class="a-nav">Pricing</a>
             </div>
             <div class="login">
                 <a class="login-p" href="#">Log In</a>
                 <button class="sign-up">Sign Up Free<img class="arrow-right" src="./img/arrow-right.png"></button>
             </div>
-            <img class="menu" src="./img/menu-outline.png">
+            <img class="menu" src="./img/menu-outline.png" id="menu">
+        </div>
+        <div class="burger-menu" id="burger-menu">
+            <a href="#projects" class="burger-menu-a">Products</a>
+            <a href="#solutions" class="burger-menu-a">Solutions</a>
+            <a href="#tools" class="burger-menu-a">Services</a>
+            <a href="#improve" class="burger-menu-a">Help Center</a>
+            <a href="#join" class="burger-menu-a">Pricing</a>
         </div>
     </header>
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="projects-text">
             <h1 class="projects-h1">Team projects, done well</h1>
             <p class="projects-p">The only platform that gives your team all the tools needed to work together on their awesome projects. </p>
@@ -45,9 +53,8 @@
         <div class="projects-img">
             <img class="project-img" src="./img/Desktop.png">
         </div>
-
     </section>
-    <section class="work">
+    <section class="work" id="solutions">
         <div class="work-imgs">
             <img src="./img/work-1.png" alt="" class="work-1">
             <img src="./img/work-2.png" alt="" class="work-2">
@@ -61,7 +68,7 @@
             </div>
         </div>
     </section>
-    <section class="tools">
+    <section class="tools" id="tools">
         <div class="tools-text">
             <h1 class="tools-h1">Get all the tools your team needs</h1>
             <p class="tools-p">Egestas fringilla aliquam leo, habitasse arcu varius lorem elit. Neque pellentesque<br> donec et tellus ac varius tortor, bibendum. Nulla felis ac turpis at amet. Purus<br> malesuada placerat arcu at enim elit in accumsan.</p>
@@ -76,7 +83,6 @@
     <section class="problems">
         <div class="problems-div">
             <div class="space">
-                
             </div>
             <div class="problems-text">
                 <h1 class="problems-h1">Problems come and<br> get solved with ease</h1>
@@ -87,22 +93,22 @@
             </div>
         </div>
     </section>
-    <section class="improve">
+    <section class="improve" id="improve">
         <div class="improve-text">
             <h1 class="improve-h1">Improve workflow</h1>
             <div class="btn-improve">
-                <button class="choose active">Research</button>
-                <button class="choose">Plan</button>
-                <button class="choose">Design</button>
+                <button class="choose active" data-image="./img/improve.png">Research</button>
+                <button class="choose" data-image="./img/Desktop.png">Plan</button>
+                <button class="choose" data-image="./img/improve.png">Design</button>
             </div>
             <p class="improve-p">Egestas fringilla aliquam leo, habitasse arcu varius lorem elit. Neque<br> pellentesque donec et tellus ac varius tortor, bibendum. Nulla felis ac turpis<br> at amet. Purus malesuada placerat arcu at enim elit in accumsan.</p>
             <a class="improve-more" href="#">Check the tools <img class="improve-arrow" src="./img/arrow-work.png"></a>
         </div>
         <div class="improve-img">
-            <img class="improve-deskstop" src="./img/improve.png">
+            <img class="improve-deskstop" src="./img/improve.png" id="improve-img">
         </div>
     </section>
-    <section class="join">
+    <section class="join" id="join">
         <div class="join-text">
             <h1 class="join-h1">Join our community today</h1>
             <p class="join-p">Egestas fringilla aliquam leo, habitasse arcu varius lorem elit. Neque pellentesque donec et tellus ac<br> varius tortor, bibendum. Nulla felis ac turpis at amet. Purus malesuada placerat arcu at enim elit in accumsan.</p>

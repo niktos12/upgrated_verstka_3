@@ -32,6 +32,25 @@ header {
   position: sticky;
   top: 0;
   z-index: 2;
+  transition: all 0.5s ease;
+}
+header .burger-menu {
+  display: none;
+  transition: all 0.9s ease;
+  padding: 5px 0;
+}
+@media (max-width: 890px) {
+  header .active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+header .active .burger-menu-a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #0F172A;
 }
 header .header {
   display: flex;
@@ -567,6 +586,9 @@ body .improve {
     justify-content: center;
   }
 }
+body .improve .improve-img .improve-deskstop {
+  transition: opacity 0.5s ease;
+}
 @media (max-width: 679px) {
   body .improve .improve-img .improve-deskstop {
     max-width: 80%;
@@ -616,11 +638,15 @@ body .improve .improve-text .btn-improve .choose {
   border: 1px solid #CBD5E1;
   background: #fff;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 @media (max-width: 375px) {
   body .improve .improve-text .btn-improve .choose {
     padding: 8px 16px;
   }
+}
+body .improve .improve-text .btn-improve .choose:hover {
+  background: #F1F5F9;
 }
 body .improve .improve-text .btn-improve .active {
   background: #F1F5F9;
