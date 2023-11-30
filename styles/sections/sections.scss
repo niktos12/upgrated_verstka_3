@@ -8,16 +8,53 @@ body{
         gap: 80px;
         align-items: center;
         padding: 80px;
+        @include imgs(){
+            padding-top: 0;
+        }
+        @include columns(){
+            flex-direction: column;
+            gap: 40px;
+        }
+        @include backImgs(){
+            padding: 40px;
+        }
+        .projects-img{
+            @include imgs(){
+                display: flex;
+                justify-content: center;
+            }
+            .project-img{
+                @include imgs(){
+                    width: 80%;
+                }
+                @include backImgs(){
+                    width: 100%;
+                }
+            }
+        }
         .projects-text{
             display: flex;
             flex-direction: column;
             gap: 24px;
+            @include columns(){
+                align-items: center;
+            }
             .projects-h1{
                 font-size: 72px;
                 color: #0F172A;
                 font-weight: 800;
                 line-height: 110%;
                 margin-bottom: 0;
+                @include textAdaptive(){
+                    text-align: center;
+                }
+                @include imgs(){
+                    font-size: 56px;
+                    margin: 0;
+                }
+                @include aller(){
+                    font-size: 48px;
+                }
             }
             .projects-p{
                 font-size: 18px;
@@ -25,6 +62,12 @@ body{
                 line-height: 160%;
                 color: #475569;
                 margin: 0;
+                @include textAdaptive(){
+                    text-align: center;
+                }
+                @include aller(){
+                    font-size: 16px;
+                }
             }
             .input-email{
                 display: flex;
@@ -35,6 +78,9 @@ body{
                 .email-icon{
                     margin-right: -50px;
                     z-index: 1;
+                    @include columns(){
+                        display: none;
+                    }
                 }
                 .email-text{
                     display: flex;
@@ -64,9 +110,6 @@ body{
                     line-height: 24px; /* 150% */
                     letter-spacing: 0.5px;
                     cursor: pointer;
-                    .arrow-right{
-
-                    }
                 }
             }
         }
@@ -78,6 +121,13 @@ body{
             padding: 16px;
             justify-content: space-between;
             align-items: flex-start;
+            @include partners(){
+                display: grid;
+                grid-template-columns: 125px 125px;
+                row-gap: 16px;
+                justify-content: center;
+                column-gap: 32px;
+            }
         }
     }
     .work{
@@ -87,20 +137,47 @@ body{
         justify-content: center;
         align-items: center;
         padding: 80px;
+        @include columns(){
+            flex-direction: column-reverse;
+            gap: 40px;
+        }
+        @include backImgs(){
+            padding: 40px;
+        }
         .work-imgs{
             display: flex;
             flex-direction: row;
             gap: 16px;
-
+            @include aller(){
+                gap: 8px;
+            }
             .work-1{
                 margin-top: 80px;
+                @include imgs(){
+                    max-height: 280px;
+                }
+                @include backImgs(){
+                    max-height: 200px;
+                }
             }
             .work-2{
                 margin-bottom: 80px;
+                @include imgs(){
+                    max-height: 280px;
+                }
+                @include backImgs(){
+                    max-height: 200px;
+                }
             }
             .work-3{
                 margin-top: 40px;
                 margin-bottom: 40px;
+                @include imgs(){
+                    max-height: 280px;
+                }
+                @include backImgs(){
+                    max-height: 200px;
+                }
             }
         }
         .work-text{
@@ -113,12 +190,21 @@ body{
                 font-weight: 800;
                 line-height: 110%;
                 margin: 0;
+                @include imgs(){
+                    font-size: 48px;
+                }
+                @include aller(){
+                    font-size: 32px;
+                }
             }
             .work-p{
                 font-size: 18px;
                 font-weight: 400;
                 line-height: 160%;
                 margin: 0;
+                @include aller(){
+                    font-size: 16px;
+                }
             }
             .work-more{
                 display: flex;
@@ -144,21 +230,55 @@ body{
         padding: 80px;
         gap: 120px;
         margin-bottom: 80px;
+        justify-content: center;
+        @include backImgs(){
+            padding: 40px;
+        }
+        @include columns(){
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        .tools-img{
+            @include imgs(){
+                display: flex;
+                justify-content: center;
+            }
+            .tool-img{
+                @include imgs(){
+                    max-width: 80%;
+                }
+                @include backImgs(){
+                    width: 110%;
+                    max-width: none;
+                }
+            }
+        }
         .tools-text{
             gap: 24px;
             display: flex;
             flex-direction: column;
+            
             .tools-h1{
                 font-size: 56px;
                 font-weight: 800;
                 line-height: 110%;
                 margin-bottom: 0;
+                @include imgs(){
+                    font-size: 48px;
+                }
+                @include aller(){
+                    font-size: 32px;
+                }
             }
             .tools-p{
                 font-size: 18px;
                 font-weight: 400;
                 line-height: 160%;
                 margin: 0;
+                @include aller(){
+                    font-size: 16px;
+                }
             }
             .tools-more{
                 .tools-more-a{
@@ -183,23 +303,38 @@ body{
             padding: 80px;
             border-radius: 30px;
             background-image: url(../img/baloons.jpg);
+            @include imgs(){
+                padding: 40px;
+            }
             .space{
                 content: '';
                 width: 600px ;
                 max-width: 600px;
                 max-height: 200px;
+                @include columns(){
+                    display: none;
+                }
             }
             .problems-text{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
                 gap: 24px;
+                @include columns(){
+                    align-items: flex-start;
+                }
                 .problems-h1{
                     font-size: 56px;
                     font-weight: 800;
                     line-height: 110%;
                     color: #fff;
                     margin: 0;
+                    @include imgs(){
+                        font-size: 48px;
+                    }
+                    @include aller(){
+                        font-size: 32px;
+                    }
                 }
                 .problems-p{
                     font-size: 18px;
@@ -207,6 +342,9 @@ body{
                     line-height: 160%;
                     color: #fff;
                     margin: 0;
+                    @include aller(){
+                        font-size: 16px;
+                    }
                 }
                 .problems-more{
                     .problems-more-a{
@@ -233,6 +371,29 @@ body{
         padding: 80px;
         margin-bottom: 80px;
         gap: 80px;
+        @include columns(){
+            flex-direction: column;
+            gap: 40px;
+            margin-bottom: 0;
+        }
+        @include backImgs(){
+            padding: 40px;
+        }
+        .improve-img{
+            @include imgs(){
+                display: flex;
+                justify-content: center;
+            }
+            .improve-deskstop{
+                @include imgs(){
+                max-width: 80%;
+            }
+            @include backImgs(){
+                width: 110%;
+                max-width: none;
+            }
+            }
+        }
         .improve-text{
             display: flex;
             flex-direction: column;
@@ -245,6 +406,12 @@ body{
                 line-height: 110%;
                 color: #0F172A;
                 margin: 0;
+                @include imgs(){
+                    font-size: 48px;
+                }
+                @include aller(){
+                    font-size: 32px;
+                }
             }
             .btn-improve{
                 display: flex;
@@ -259,6 +426,9 @@ body{
                     border: 1px solid #CBD5E1;
                     background: #fff;
                     cursor: pointer;
+                    @include aller(){
+                        padding: 8px 16px;
+                    }
                     
                 }
                 .active{
@@ -277,6 +447,9 @@ body{
                 font-size: 18px;
                 font-weight: 400;
                 line-height: 160%;
+                @include aller(){
+                    font-size: 16px;
+                }
             }
             .improve-more{
                 display: flex;
@@ -293,7 +466,17 @@ body{
         padding: 80px;
         border-radius: 30px;
         margin: 0 80px;
+        justify-content: center;
         background: linear-gradient(99deg, #312E81 0%, #1E40AF 0.01%, #1E3A8A 46%, #701A75 96.97%);
+        @include imgs(){
+            margin: 0;
+        }
+        @include pads(){
+            padding: 40px;
+        }
+        @include aller(){
+            padding: 20px;
+        }
         .join-text{
             display: flex;
             flex-direction: column;
@@ -307,6 +490,12 @@ body{
                 font-weight: 800;
                 line-height: 110%;
                 margin: 0;
+                @include imgs(){
+                    font-size: 48px;
+                }
+                @include aller(){
+                    font-size: 32px;
+                }
             }
             .join-p{
                 text-align: center;
@@ -315,6 +504,9 @@ body{
                 font-weight: 400;
                 line-height: 160%;
                 margin: 0;
+                @include aller(){
+                    font-size: 16px;
+                }
             }
             .join-more{
                 padding: 15px 24px;
@@ -340,16 +532,31 @@ body{
             flex-direction: row;
             justify-content: space-between;
             padding: 80px;
+            @include headerFooter(){
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            @include backImgs(){
+                padding: 0px 16px;
+                margin-top: 40px;
+            }
             .logo-teams{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                @include headerFooter(){
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 16px;
+                }
                 .logo-footer{
                     margin: 0;
                     font-size: 18px;
                     font-weight: 700;
                     line-height: 110%;
                     color: #0F172A;
+                    cursor: pointer;
                 }
                 .footer-p{
                     margin: 0;
@@ -359,6 +566,13 @@ body{
                 display: flex;
                 flex-direction: row;
                 gap: 24px;
+                @include backImgs(){
+                    gap: 12px;
+                }
+                @include pads(){
+                    display: grid;
+                    grid-template-columns: 100px 100px;
+                }
                 .a-nav-footer{
                     font-size: 16px;
                     font-weight: 400;
@@ -367,6 +581,11 @@ body{
                     text-decoration: none;
                 }
             }
+        }
+    }
+    br{
+        @include backImgs(){
+            display: none;
         }
     }
 }

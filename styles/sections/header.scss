@@ -1,5 +1,8 @@
 header{
     padding: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
     .header{
         display: flex;
         justify-content: space-between;
@@ -14,6 +17,9 @@ header{
             display: flex;
             flex-direction: row;
             gap: 16px;
+            @include headerFooter(){
+                display: none;
+            }
             .a-nav{
                 text-decoration: none;
                 font-size: 16px;
@@ -23,12 +29,21 @@ header{
                 color: #0F172A;
             }
         }
+        .menu{
+            display: none;
+            @include headerFooter(){
+                display: flex;
+            }
+        }
         .login{
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             gap: 16px;
+            @include headerFooter(){
+                display: none;
+            }
             .login-p{
                 text-decoration: none;
                 color: #2563EB;

@@ -20,6 +20,46 @@
         @content
     }
 };
+@mixin columns(){
+    @media (max-width:$breakpoint_for_columns){
+        @content
+    }
+};
+@mixin partners(){
+    @media (max-width:$breakpoint_for_partners){
+        @content
+    }
+};
+@mixin textAdaptive(){
+    @media (max-width:$breakpoint_for_text){
+        @content
+    }
+};
+@mixin headerFooter(){
+    @media (max-width:$breakpoint_for_header_and_footer){
+        @content
+    }
+};
+@mixin imgs(){
+    @media (max-width:$breakpoint_for_imgs){
+        @content
+    }
+};
+@mixin backImgs(){
+    @media (max-width:$breakpoint_for_back_imgs){
+        @content
+    }
+};
+@mixin pads(){
+    @media (max-width:$breakpoint_for_pads){
+        @content
+    }
+};
+@mixin aller(){
+    @media (max-width:$breakpoint_for_all){
+        @content
+    }
+};
 @mixin footerAdaptive(){
     @media (max-width: $breakpoint_for_footer){
         @content
